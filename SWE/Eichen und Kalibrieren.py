@@ -30,7 +30,7 @@ U = thermo_voltage(a=1, b=1 ,c=1 , T=1 , T_ref=2,  )
 # Noch nicht fertig, wird nur hochgeladen um Merging-Konflikte zu vermeiden. Nächste Aufgabe, Koeffizienten bestimmen, entweder mit Scipy oder mit SciDavis, erstmal essen.
 
 A = np.array([
-    [60.4**2, 60.4],
+    [69.4**2, 69.4],
     [40.5**2, 40.4]
 ])
 B = np.array(calibration_voltage[0:-1]) # ACHTUNG IN MILLIVOLT!!!!!!!
