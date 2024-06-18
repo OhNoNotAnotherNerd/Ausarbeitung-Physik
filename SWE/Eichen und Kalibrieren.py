@@ -15,7 +15,7 @@ for i in range(len(calibration_temperature)):
 
 print(calibration_temperature_kelvin)
 
-calibration_voltage = [2.60*10**-3, 1.52*10**-3, -0.01*10**-3] # ACHTUNG IN MILLIVOLT!!!!!!!
+calibration_voltage = [2.60, 1.52, -0.01] # ACHTUNG IN MILLIVOLT!!!!!!!
 
 
 
@@ -41,9 +41,9 @@ a, b = coefficients
 print(f'a = {a}, b = {b}')
 print(A)
 
-plt.plot(calibration_voltage, calibration_temperature_kelvin, linestyle='-', marker='o')
+plt.plot(calibration_temperature, calibration_voltage, linestyle='-', marker='o')
 plt.grid(visible=True, color='black', linewidth=0.5)
 plt.title("Eichungskurve")
-plt.xlabel("Spannung [mV]")
-plt.ylabel("Temparatur [Kelvin]")
+plt.xlabel("Temparatur in C°")
+plt.ylabel("Spannung [mV]T")
 plt.show()
