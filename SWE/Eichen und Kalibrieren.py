@@ -6,7 +6,7 @@ import sympy as sy
 
 #Eichungskurve
 
-calibration_temperature = [60.4, 40.5, 0]
+calibration_temperature = [69.4, 40.4, 0]
 calibration_temperature_kelvin = []
 
 for i in range(len(calibration_temperature)):
@@ -19,19 +19,19 @@ calibration_voltage = [2.60, 1.52, -0.01] # ACHTUNG IN MILLIVOLT!!!!!!!
 
 
 
-def thermo_voltage(a, b, c, T, T_ref,):
+def thermo_voltage(a, b, c, T, T_ref):
     temp_diff = (T - T_ref)
     U_therm = a * temp_diff**2 + b * temp_diff + c
     return U_therm
 
-U = thermo_voltage(a=1, b=1 ,c=1 , T=1 , T_ref=2,  )
+U = thermo_voltage(a=1, b=1 ,c=1 , T=1 , T_ref=0,  )
 
 
 # Noch nicht fertig, wird nur hochgeladen um Merging-Konflikte zu vermeiden. Nächste Aufgabe, Koeffizienten bestimmen, entweder mit Scipy oder mit SciDavis, erstmal essen.
 
 A = np.array([
     [69.4**2, 69.4],
-    [40.5**2, 40.4]
+    [40.4**2, 40.4]
 ])
 B = np.array(calibration_voltage[0:-1]) # ACHTUNG IN MILLIVOLT!!!!!!!
 
