@@ -23,3 +23,13 @@ plt.title("Eichungskurve")
 plt.xlabel("Spannung [mV]")
 plt.ylabel("Temparatur [Kelvin]")
 plt.show()
+
+def thermo_voltage(a, b, c, T, T_ref):
+    U_therm = a * temp_diff**2 + b * temp_diff + c
+    temp_diff = (T - T_ref)
+    return U_therm
+
+U = thermo_voltage(a=1, b=1 ,c=1 , T=1 , T_ref=1 )
+
+
+# Noch nicht fertig, wird nur hochgeladen um Merging-Konflikte zu vermeiden. Nächste Aufgabe, Koeffizienten bestimmen, entweder mit Scipy oder mit SciDavis, erstmal essen.
